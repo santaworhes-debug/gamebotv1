@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 class GameBot:
     def __init__(self):
         self.db = Database()
-        self.app = ApplicationBuilder().token("7352416890:AAHkXmN9pLqR8vYwZtBj3aC5dF7gK2mN4xU").build()
+        self.app = ApplicationBuilder().token("8981547481:AAGkcLgc8bJ9DnPby56CtMsHiP-y0UMg86Y").build()
         self._register_handlers()
 
     def _register_handlers(self):
