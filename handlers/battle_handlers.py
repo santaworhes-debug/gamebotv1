@@ -103,6 +103,10 @@ async def defend(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await db.update_player(user.id, hp=1)
         await query.edit_message_text("💀 Поражение, несмотря на защиту.")
         return
-
+async def flee(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    query = update.callback_query
+    await query.answer()
+    context.user_data.pop("enemy", None)
+    await query.edit_message_text("🏃 Ты сбежал с поля боя.")
     await db.update_player(user.id, hp=new_hp)
     await query.edit_message_text(f"🛡️ Защита уменьшила урон до {reduced_damage}. Ваше HP: {new_hp}/{player['max_hp']}")
