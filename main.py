@@ -3,8 +3,8 @@
 import asyncio
 import logging
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, ConversationHandler
-from handlers.battle_handler import battle_handler, attack, defend, flee
-from handlers.profile_handler import start_handler, profile_handler
+from handlers.battle_handlers import battle_handler, attack, defend, flee
+from handlers.profile_handlers import start_handler, profile_handler
 from database import Database
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.DEBUG)
