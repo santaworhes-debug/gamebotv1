@@ -3,7 +3,7 @@ from config import DATABASE_PATH
 
 class Database:
     def __init__(self):
-        self.path = DATABASE_PATH
+        self.path = "/tmp/game_state.db"
 
     async def init(self):
         async with aiosqlite.connect(self.path) as db:
